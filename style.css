@@ -1,0 +1,303 @@
+/*SOMMAIRE
+-------------------------------------------------------
+1. MISE EN PAGE GÉNÉRALE 
+2. PARTIE DROITE (SECTION)
+3. PARTIE GAUCHE (ASIDE)
+4. RESPONSIVE DESIGN
+*/
+
+
+/*1.MISE EN PAGE GÉNÉRALE
+----------------------------------------------------*/
+body{
+    max-width: 1190px;
+    margin:auto;
+    font-family: 'Roboto', sans-serif;
+    color:#424242;
+    
+}
+.container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+header{
+    margin-bottom:120px;
+}
+footer{
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+.far, .fas{
+    color:#FFCA28;
+}
+
+/*Titres*/
+h1{
+    font-size:4em;
+    margin-top:100px;
+    margin-bottom:0px;
+    font-weight: 200;
+}
+h2{
+    margin-top:0;
+    margin-bottom:4px;
+    font-weight: 400;
+}
+h3{
+    font-size:1.8em;
+    text-transform: uppercase;
+    border-bottom:2px solid #FFCA28;
+    padding-bottom:15px;
+    font-weight: 500;
+}
+h4{
+    font-size:1.3em;
+    text-transform: uppercase;
+    margin-bottom:0;
+    font-weight: 500;
+}
+/*Couleur du prénom et mise en place du trait sous les compétences*/
+h1 span{
+    color: #FFCA28;
+    font-weight:400;
+}
+header hr{
+    border: 1px solid #FFCA28;
+    width: 10%;
+    margin: 0px;
+}
+/*2.PARTIE DE DROITE (SECTION)
+----------------------------------------------------*/
+section {
+    flex:2;
+    padding: 0 40px 0 70px;
+}
+.part_right{
+    display: flex;
+}
+h3 .fas{
+    margin-right:30px;
+    font-size:1.4em;
+
+}
+article h3{
+    color:black;
+}
+.part_right_text{
+    flex:2;
+}
+/*Dates et icones pour toutes les dates du CV*/
+.date{
+    flex:1;
+    font-weight: 500;
+    display: flex;
+    margin-top:27px;
+    
+}
+.date p{
+    margin-top:0px;
+    margin-bottom:3px;
+    
+}
+.date .far, .fas{
+    margin-right:10px;
+    font-size:0.7em;
+    margin-top:4px;
+    
+
+}
+/*Textes et listes à puces dans la partie "Recommandatation*/
+.text_recommandations div{
+    display:flex;
+    justify-content: space-between;
+}
+article ul{
+    list-style-type:none;
+    padding-left:0px;
+    font-weight: 400;
+    margin-right:30px;
+}
+article ul li:nth-child(4){
+    font-weight: 200;
+}
+article ul:nth-child(2){
+    margin-right:100px;
+}
+.text_recommandations li{
+    margin-bottom:5px;
+}
+
+/*3.PARTIE GAUCHE (ASIDE)
+----------------------------------------------------*/
+aside{
+    display: flex;
+    flex-direction: column;
+    background-color:#FFCA28;
+    flex: 1;
+    padding-top:50px;
+    color:#FFCA28; 
+    text-align: justify; 
+}
+aside img{
+
+    display: block;
+    width: 200px;
+    border: 2px color:#424242;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;  
+   
+}
+aside h3{
+    background-color:#424242;
+    padding : 10px;
+    text-align: center;;
+}
+aside p, a {
+    padding: 0 40px 0 40px; 
+}
+aside .fas{
+    color:#424242;
+    font-size:3em;
+    background:#0000;
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    border:1px solid #424242;
+    text-align: center;
+    padding:  0.2em;
+
+}
+.aside_loisir_icons{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    margin-top: 1rem;
+}
+aside div:first-child{
+    flex:2;
+}
+article ul li:first-child{
+    margin-bottom:13px;
+    text-transform: uppercase;
+}
+address{
+    font-style:normal;
+    font-weight: 400;
+}
+address a{
+    text-decoration: none;
+    color:black;
+    padding-left:0px;
+}
+address p{
+    margin-top:25px;
+}
+
+p
+{
+    color: black;
+}
+
+/*4.RESPONSIVE DESIGN
+/* Grand écran */
+@media screen and (min-width: 1981px) {
+    body{
+        max-width: none;
+    }
+    main{
+        display: flex;
+    }
+    section{
+        flex:4;
+    }
+    aside {
+        flex:1;
+    }
+    article {
+        box-shadow: 0px 0px 10px 0px color:#424242;
+        margin-right: 30px;
+        border-radius:7px;
+        padding: 30px;
+    }
+}
+
+/* Masquer la photo du header sur écran > que les tablettes */
+@media screen and (min-width: 900px) {
+    header img{
+        display:none;
+    }
+}
+
+/* Tablettes */
+@media screen and (max-width: 991px) {
+    .container{
+        flex-direction: column;
+    }
+    h1{
+        font-size:3.4em;
+        margin-top:50px;
+    }
+    section{
+        padding:20px;
+    }
+    article ul:nth-child(2){
+        margin-right:0;
+    }
+    address{
+        display: flex;
+    }
+    header{
+        text-align: center;
+        padding-top:30px;
+    }
+    header hr{
+        display:flex;
+        margin:auto;
+    }
+    header img{
+        border-radius: 300px;
+        display: flex;
+        margin: auto;
+    }
+    aside{
+        padding-top: 0;
+    }
+    aside h3:first-child{
+        margin-top: 0;
+    }
+    aside img{
+        display: none;
+    }
+}
+
+/* Téléphone */
+@media screen and (max-width: 425px) {
+    .part_right {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 10px 0px color:#424242;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius:7px;
+    }
+    header {
+        margin-bottom: 50px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }  
+    .text_recommandations div {
+        flex-direction: column;
+        box-shadow: 0px 0px 10px 0px color:#FFCA28;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius:7px;
+    }
+    address{
+        flex-direction: column;
+    }
+    header img{
+        max-width:150px;
+    }
+}
